@@ -7,10 +7,14 @@ ACCOUNTS = {}
 
 def account_no(acc_name):
     if acc_name not in ACCOUNTS:
-         ACCOUNTS[acc_name] = acc_name.upper() + random.sample("0123456789",10)
+         ACCOUNTS[acc_name] = acc_name.upper() + "".join(random.sample("0123456789",10))
     return ACCOUNTS[acc_name]
 
-print(account_no('satyam'))
+
+
+account_no('satyam')
+
+print(ACCOUNTS)
 
 # show some info when i write the account name..like account no. name date of account open
 # store all user data in a dictionary form
