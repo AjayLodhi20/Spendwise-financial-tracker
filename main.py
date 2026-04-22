@@ -15,7 +15,6 @@ def account_no():
         new_numbers = "".join(numbers)
         account_holder[acc_name] = f"{acc_name}{new_numbers}"
 account_no('satyam')
-print()
 
 # show some info when i write the account name..like account no. name date of account open
 # store all user data in a dictionary form
