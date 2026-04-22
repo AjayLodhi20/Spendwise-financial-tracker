@@ -4,16 +4,7 @@ CATEGORIES = ('Food', 'Transport', 'Entertainment', 'Utilities', 'Misc')
 numbers = '1234567890'
 numbers = list(numbers)
 
-def account_no():
-    account_holder ={}
-    while True:
-        acc_name = input("enter account name").upper()
-        if acc_name != str:
-            print("Name should not include no. or symbol or lowercase")
-            continue
-        random.shuffle(numbers)
-        new_numbers = "".join(numbers)
-        account_holder[acc_name] = f"{acc_name}{new_numbers}"
+def account_no(acc_name)
 # show some info when i write the account name..like account no. name date of account open
 # store all user data in a dictionary form
 # check if the user has put one of the existing name correctly
