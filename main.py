@@ -3,17 +3,12 @@ CATEGORIES = ('Food', 'Transport', 'Entertainment', 'Utilities', 'Misc')
 # create accounts separate for all
 numbers = '1234567890'
 numbers = list(numbers)
+ACCOUNTS = {}
 
 def account_no(acc_name):
-    acc_holder= {}
-    if isinstance(acc_name, str):
-        acc_name = acc_name.upper()
-        random.shuffle(numbers)
-        new_list = "".join(numbers)
-        acc = f"{acc_name}{new_list}"
-        return acc_holder[acc_name]
-    else:
-        raise AttributeError("write string in the function call..")
+    if acc_name not in ACCOUNTS:
+         ACCOUNTS[acc_name] = acc_name.upper() + random.sample("0123456789",10)
+    return ACCOUNTS[acc_name]
 
 print(account_no('satyam'))
 
